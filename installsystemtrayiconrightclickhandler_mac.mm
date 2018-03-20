@@ -19,7 +19,7 @@ void macos_installSystemTrayIconRightClickHandler()
         return;
 
     // relies on private implementation, see qcocoasystemtrayicon.mm
-    Class QNSStatusItemClass = objc_lookUpClass("QNSStatusItem");
+    Class QNSStatusItemClass = objc_lookUpClass(QT_STRINGIFY(QT_MANGLE_NAMESPACE(QNSStatusItem)));
     if (!QNSStatusItemClass)
         return;
 
